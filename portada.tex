@@ -1,0 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tikzpicture}[overlay,remember picture]
+	%\node at (current page.center) {\includegraphics[page=1]{Plantilla_Memoria_TFM_PDF-2018.pdf}};
+	\node at ($(current page.north)+(-5.8cm,-3.3cm)$) {\includegraphics[scale=0.72]{marca_UPV_principal_negro.pdf}};
+	\node at ($(current page.north)+(5.55cm,-3.3cm)$) {\includegraphics[trim=0mm 0mm 0mm 0,clip,width=0.4\textwidth]{logo_die.pdf}};
+	\node[anchor=center] at ($(current page.center)!0.48!(current page.north)+(0cm,0)$) (titulo){\begin{minipage}{\textwidth}\begin{center}\LARGE\textbf{\uppercase{\titulo}}\end{center}\end{minipage}};
+	
+	\node[anchor=north west] at  ($(current page.center)+(-1.45cm,-5.475cm)$) (){\parbox{0.585\textwidth}{%
+			\rmfamily
+			\tolerance=1%
+			\emergencystretch=\maxdimen%
+			\hyphenpenalty=10000%
+			\hbadness=10000%
+			\large Trabajo   Fin   de   Máster   presentado   en   el Departamento  de  Ingeniería  Electrónica  de  la Universitat   Politècnica   de   València   para   la obtención  del  Título  de  Máster  Universitario  en Ingeniería de Sistemas Electrónicos\newline
+			\ \\
+			Curso \curso\\ 
+			\ \\
+			Valencia, \fecha}};
+	\node[anchor=west] at ($(current page.west)+(2.85cm,0.9cm)$) (tutor){\Large\bfseries Tutor: \tutorA};
+	\node[anchor=west] at ($(current page.west)+(2.85cm,-0.1cm)$) {\Large\bfseries \ifthenelse{\equal{\tutorB}{}}{}{Cotutor: \tutorB}};
+	\node[anchor=west] at ($(current page.west)+(2.85cm,-2.25cm)$) {\Large\bfseries \ifthenelse{\equal{\tutorE}{}}{}{Tutor de Empresa: \tutorE}};
+	\node[coordinate] at ($(titulo.south)!(tutor.north)!(titulo.south)$) (tutornorte){}; %altura de tutor pero centrado
+	\node at ($(titulo.south)!0.49!(tutornorte)$) (){\begin{minipage}{\textwidth}\begin{center}\Large\textbf{Autor: \autor}\end{center}\end{minipage}};
+\end{tikzpicture}

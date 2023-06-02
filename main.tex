@@ -1,0 +1,98 @@
+\documentclass[11pt,spanish,a4paper,hidelinks]{book}
+\input{preambulo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   COMPILAR CON XELATEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}{TÍTULO DEL TFM (EN MAYÚSCULAS)}
+\newcommand{\tutorA}{Nombre y apellidos del tutor}
+\newcommand{\tutorB}{Nombre y apellidos del cotutor (en su caso)} % En su caso. En blanco si no hay.
+\newcommand{\tutorE}{Nombre y apellidos del tutor en la empresa (en su caso)} %En su caso. En blanco si no hay.
+\newcommand{\curso}{2019-20} %(curso que proceda)
+\newcommand{\autor}{Autor del Trabajo Final de Máster}
+\newcommand{\fecha}{Septiembre  de  2019} %mes y año            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Si alguna página de la tabla de contenidos tiene encabezado o pie de
+%página, probar a añadir estas líneas tras el \chapter{} de uno de los 
+%capítulos/anexos que aparezcan en esa página
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+%\addtocontents{toc}{\protect\pagestyle{empty}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\renewcommand{\listtablename}{Índice de tablas} 
+	\renewcommand{\tablename}{Tabla} 
+	%\headrulecolor{azul}
+	\thispagestyle{empty}
+	\input{portada}
+	\newpage
+	\thispagestyle{empty}\ \\
+	\newpage
+	\thispagestyle{empty}
+	
+	\section*{Resumen}
+	\noindent La memoria comienza con un breve resumen de entre 
+	100 y 300
+	palabras, escrito en castellano,
+	valenciano e inglés. No numerar estas páginas.
+	Resum
+	
+	
+	\section*{Resum}
+	\noindent La memoria del TFG comença amb un breu resum d’entre 
+	100 i 300
+	paraules, escrit en castellà, valencià i anglès. Aquestes pàgines van sense numerar.
+	
+	
+	\section*{Abstract}
+	\noindent The memory of the TFG begins with a short abstract from 
+	100 and 300
+	words, writen in Spanish, Valencian and English. These pages are not numbered.
+	
+	\newpage
+	\thispagestyle{empty}
+	\ \\
+	\vfill\begin{flushright}
+		A mis padres.
+	\end{flushright}\vfill\vfill
+	
+	\newpage
+	\thispagestyle{empty}
+	\ \\
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\addtocontents{toc}{\protect\pagestyle{empty}}
+	\tableofcontents\newpage\thispagestyle{empty}
+	\addtocontents{lof}{\protect\thispagestyle{empty}}
+	\addtocontents{lof}{\protect\pagestyle{empty}}
+	\listoffigures\thispagestyle{empty}\newpage\thispagestyle{empty}
+	\addtocontents{lot}{\protect\thispagestyle{empty}}
+	\addtocontents{lot}{\protect\pagestyle{empty}}
+	\listoftables\thispagestyle{empty}\newpage\thispagestyle{empty}
+	\newpage\thispagestyle{empty}
+	\input{siglas}
+	\thispagestyle{empty}
+	\setcounter{page}{-2}
+	\newpage
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\part{Memoria}
+	
+	\input{muise.tex} %Directrices TFM MUISE
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\printbibliography[heading=firstlevel,title=Bibliografía]
+	%\addcontentsline{toc}{chapter}{Bibliografía}
+	\label{sec:biblio}
+	\newpage\thispagestyle{empty}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\part{Anexos}
+	\def\thechapter{\Alph{chapter}}
+	\makeatletter
+	\renewcommand{\@chapapp}{Apéndice}
+	\makeatother
+	\chapter{Listados adicionales}
+	
+	Ejemplo.
+\end{document}
+
